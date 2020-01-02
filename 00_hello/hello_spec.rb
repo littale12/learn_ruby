@@ -101,6 +101,14 @@
 #
 require "hello"
 
+def hello
+  "Hello!"
+end
+
+def greet(name)
+  "Hello, #{name}!"
+end
+
 describe "the hello function" do
   it "says hello" do
     expect(hello).to eq("Hello!")

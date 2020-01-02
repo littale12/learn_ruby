@@ -35,6 +35,22 @@
 
 require "calculator"
 
+def add(a,b)
+  a + b
+end 
+
+def subtract(a,b)
+  a - b
+end
+
+def sum(list)
+  total = 0
+  for num in list
+    total += num
+  end
+  total
+end
+
 describe "add" do
   it "adds 0 and 0" do
     expect(add(0,0)).to eq(0)
@@ -79,14 +95,18 @@ end
 
 describe "#multiply" do
 
-  it "multiplies two numbers"
+  it "multiplies two numbers" do
+    expect(multiply(7,5)).to eq(35)
+  end
 
   it "multiplies several numbers"
   
 end
 
 describe "#power" do
-  it "raises one number to the power of another number"
+  it "raises one number to the power of another number" do
+    expect(power(2,4)).to eq(16)
+  end
 end
 
 # http://en.wikipedia.org/wiki/Factorial

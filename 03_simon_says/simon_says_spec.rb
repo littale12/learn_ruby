@@ -11,6 +11,46 @@
 # When you make the second `repeat` test pass, you might break the **first**
 #
 
+def echo(string)
+  "#{string}"
+end
+
+def shout(string)
+  "#{string.upcase}"
+end
+
+def repeat(string, repeat_times=2)
+  if repeat_times < 2
+    "#{string}"
+  else
+    "#{string}" + " #{string}" * (repeat_times - 1)  
+  end
+end
+
+def start_of_word(word, num)
+  stop = num - 1
+  "#{word[0..stop]}"
+end
+
+def first_word(word)
+  "#{word.split[0]}"
+end
+
+def titleize(string)
+  string = string.split(" ")
+  output_string = []
+  x = 0
+  for word in string
+    if x == 0 || ["and", "over", "the"].include?(word) == FALSE
+      output_string << string[x].capitalize()
+    else
+      output_string << string[x]
+    end
+    x+=1
+  end
+  "#{output_string.join(" ")}"
+end
+
 require "simon_says"
 
 describe "Simon says" do
